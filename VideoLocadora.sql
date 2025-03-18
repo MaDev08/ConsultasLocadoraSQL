@@ -2,7 +2,7 @@
 --GO 
 --USE VIDEOLOCADORA
 
---CRIA«√O DAS TABELAS
+--CRIA√á√ÉO DAS TABELAS
 
 --APAGA AS TABELAS E RECRIA
 if OBJECT_ID('LOCACOES','U') IS NOT NULL 
@@ -60,7 +60,7 @@ CREATE TABLE dbo.LOCACOES
 )
 
 
---CRIA«√O DOS RELACIONAMENTOS 
+--CRIA√á√ÉO DOS RELACIONAMENTOS 
 --LOCACAO - CLIENTES
 ALTER TABLE dbo.LOCACOES WITH CHECK ADD CONSTRAINT FK_LOCACOES_CLIENTE FOREIGN KEY (COD_CLIENTE)
 REFERENCES dbo.CLIENTES(COD_CLIENTE)
@@ -86,53 +86,53 @@ GO
 ALTER TABLE dbo.FILME CHECK CONSTRAINT FK_CATEGORIA_FILME
 GO
 
--- INSER«’ES NAS TABELAS
+-- INSER√á√ïES NAS TABELAS
 --categoria
-INSERT INTO dbo.CATEGORIA VALUES ('AÁ„o')	  ;
-INSERT INTO dbo.CATEGORIA VALUES ('Romance')  ;
-INSERT INTO dbo.CATEGORIA VALUES ('Aventura') ;
-INSERT INTO dbo.CATEGORIA VALUES ('FicÁ„o')	  ;
-INSERT INTO dbo.CATEGORIA VALUES ('Drama')	  ;
-INSERT INTO dbo.CATEGORIA VALUES ('Terror')	  ;
-INSERT INTO dbo.CATEGORIA VALUES ('Desenho')  ;
-INSERT INTO dbo.CATEGORIA VALUES ('Policial') ;
-INSERT INTO dbo.CATEGORIA VALUES ('ComÈdia')  ;
+INSERT INTO dbo.CATEGORIA VALUES ('A√ß√£o');
+INSERT INTO dbo.CATEGORIA VALUES ('Romance');
+INSERT INTO dbo.CATEGORIA VALUES ('Aventura');
+INSERT INTO dbo.CATEGORIA VALUES ('Fic√ß√£o');
+INSERT INTO dbo.CATEGORIA VALUES ('Drama');
+INSERT INTO dbo.CATEGORIA VALUES ('Terror');
+INSERT INTO dbo.CATEGORIA VALUES ('Desenho');
+INSERT INTO dbo.CATEGORIA VALUES ('Policial');
+INSERT INTO dbo.CATEGORIA VALUES ('Com√©dia');
 
 --clientes
 
 INSERT INTO dbo.CLIENTES VALUES ('321346530', 'Edson Martin Feitosa', 'Rua xxx Alvarenga, 1', 'Jd. Vera Cruz', 'Sorocaba', 'SP', '32125809', 'edson.feitosa@ig.com.br', convert(datetime,'1982-11-30 00:00:00.000',102), 'M')					   ;
-INSERT INTO dbo.CLIENTES VALUES ('421346111', 'Rafael Fernando de Moraes Moreno', 'Rua xxxx de xxxx, 123', 'Jd. Nova EsperanÁa', 'S„o Roque', 'SP', '32274567', 'rafael@terra.com.br', convert(datetime,'1985-04-01 00:00:00.000',102), 'M')	   ;
-INSERT INTO dbo.CLIENTES VALUES ('324857670', 'Jo„o da Silva', 'Rua xxxx xxxx, 13', 'Av. Bartolomeu', 'Sorocaba', 'SP', '32134098', 'joao@uol.com.br',convert(datetime, '1992-12-05 00:00:00.000',102), 'M')									   ;
+INSERT INTO dbo.CLIENTES VALUES ('421346111', 'Rafael Fernando de Moraes Moreno', 'Rua xxxx de xxxx, 123', 'Jd. Nova Esperan√ßa', 'S√£o Roque', 'SP', '32274567', 'rafael@terra.com.br', convert(datetime,'1985-04-01 00:00:00.000',102), 'M')	   ;
+INSERT INTO dbo.CLIENTES VALUES ('324857670', 'Jo√£o da Silva', 'Rua xxxx xxxx, 13', 'Av. Bartolomeu', 'Sorocaba', 'SP', '32134098', 'joao@uol.com.br',convert(datetime, '1992-12-05 00:00:00.000',102), 'M')									   ;
 INSERT INTO dbo.CLIENTES VALUES ('112345553', 'Maria Chiquinha', 'Rua xxxx, 55', 'Jd. Vera Cruz', 'Sorocaba', 'SP', '23336684', 'maria@ig.com.br', convert(datetime,'1982-11-30 00:00:00.000',102), 'F')										   ;
 INSERT INTO dbo.CLIENTES VALUES ('945848768', 'Rafael Nunes Sales', 'Rua xxx Alvarenga, 4', 'Jd. Vera Cruz', 'Sorocaba', 'SP', '32124609', 'rafael.sales@terra.com.br', convert(datetime,'1985-04-01 00:00:00.000',102), 'M')					   ;
-INSERT INTO dbo.CLIENTES VALUES ('676548499', 'Daniela Martin Feitosa', 'Rua xxxxx, 1', 'Jd. Vera das Ac·ssicas', 'Votorantim', 'SP', '32132109', 'daniela.martin@gmail.com',convert(datetime, '1986-12-26 00:00:00.000',102), 'F')			   ;
+INSERT INTO dbo.CLIENTES VALUES ('676548499', 'Daniela Martin Feitosa', 'Rua xxxxx, 1', 'Jd. Vera das Ac√°ssicas', 'Votorantim', 'SP', '32132109', 'daniela.martin@gmail.com',convert(datetime, '1986-12-26 00:00:00.000',102), 'F')			   ;
 INSERT INTO dbo.CLIENTES VALUES ('321349999', 'Renata Cristina', 'Rua xxx Alvarenga, 1', 'Jd. Vera Cruz', 'Sorocaba', 'SP', '32125809', 'renata@gmail', convert(datetime,'1970-09-01 00:00:00.000',102), 'F')									   ;
-INSERT INTO dbo.CLIENTES VALUES ('335466531', 'Joaquim Ferreira de Souza Junior', 'Rua xxx xxxx, 65', 'Jd. Santa Ros·lia', 'Votorantim', 'SP', '11125809', 'joaquim_junior@ig.com.br',convert(datetime, '1980-04-08 00:00:00.000',102), 'M')	   ;
+INSERT INTO dbo.CLIENTES VALUES ('335466531', 'Joaquim Ferreira de Souza Junior', 'Rua xxx xxxx, 65', 'Jd. Santa Ros√°lia', 'Votorantim', 'SP', '11125809', 'joaquim_junior@ig.com.br',convert(datetime, '1980-04-08 00:00:00.000',102), 'M')	   ;
 INSERT INTO dbo.CLIENTES VALUES ('112233445', 'Ladislau Ferreira', 'Rua xxxx Alvarenga, 12345', 'Jd. Vera Cruz', 'Sorocaba', 'SP', '32144409', 'ladislau@terra.com.br',convert(datetime, '1988-01-03 00:00:00.000',102), 'M')					   ;
 INSERT INTO dbo.CLIENTES VALUES ('222222222', 'Vanessa Oliveira', 'Rua xxxxxx, 1', 'Jd. do Sol', 'Votorantim', 'SP', '32122222', 'vanessa@ig.com.br',convert(datetime, '1998-08-08 00:00:00.000',102), 'F')									   ;
 
 --filmes																						;
-INSERT INTO dbo.FILME VALUES ('300', 1, 'Richard Donner', 3.5, 'n')								;
-INSERT INTO dbo.FILME VALUES ('M·quina MortÌfera', 1, 'Richard Donner', 3.6, 'n')				;
-INSERT INTO dbo.FILME VALUES ('A Mexicana', 2, 'Burr Steers', 2, 's')							;
-INSERT INTO dbo.FILME VALUES ('A Verdade Nua e Crua', 2, 'Robert Luketic', 4, 'n')				;
-INSERT INTO dbo.FILME VALUES ('A vida È bela', 2, 'Roberto Benigni', 3.5, 's')					;
-INSERT INTO dbo.FILME VALUES ('Austr·lia', 3, 'Baz Luhrmann', 4, 's')							;
-INSERT INTO dbo.FILME VALUES ('Ultimato Bourn', 3, 'Paul Greengrass', 3.5, 'n')					;
-INSERT INTO dbo.FILME VALUES ('Constantine', 4, 'Francis Lawrence', 2.5, 's')					;
-INSERT INTO dbo.FILME VALUES ('Os Irm„os Grimm', 4, 'Terry Gilliam', 3.5, 'n')					;
-INSERT INTO dbo.FILME VALUES ('Os Doze Macacos', 4, 'Terry Gilliam', 2.5, 'n')					;
-INSERT INTO dbo.FILME VALUES ('Amadeus', 5, 'Milos Forman', 10, 'n')							;
-INSERT INTO dbo.FILME VALUES ('As Torres GÍmeas', 5, 'Oliver Stone', 2.5, 's')					;
-INSERT INTO dbo.FILME VALUES ('Platoon', 1, 'Oliver Stone', 5.5, 's')							;
-INSERT INTO dbo.FILME VALUES ('O Advogado do Diabo', 6, 'Taylor Hackford', 1.5, 's')			;
-INSERT INTO dbo.FILME VALUES ('Beowulf', 7, 'Robert Zemeckis', 1, 'n')							;
-INSERT INTO dbo.FILME VALUES ('Bolt o super c„o', 7, 'Byron Howard', 1.5, 's')					;
-INSERT INTO dbo.FILME VALUES ('Apertem o cinto o piloto sumiu', 9, 'Jim Abrahams', 3.6, 's')	;
-INSERT INTO dbo.FILME VALUES ('Doze È demais', 9, 'Shawn Levy', 9.2, 's')						;
-INSERT INTO dbo.FILME VALUES ('Uma noite no museu', 9, 'Shawn Levy', 2.5, 'n')					;
+INSERT INTO dbo.FILME VALUES ('300', 1, 'Richard Donner', 3.5, 'n');
+INSERT INTO dbo.FILME VALUES ('M√°quina Mort√≠fera', 1, 'Richard Donner', 3.6, 'n');
+INSERT INTO dbo.FILME VALUES ('A Mexicana', 2, 'Burr Steers', 2, 's');
+INSERT INTO dbo.FILME VALUES ('A Verdade Nua e Crua', 2, 'Robert Luketic', 4, 'n');
+INSERT INTO dbo.FILME VALUES ('A vida √© bela', 2, 'Roberto Benigni', 3.5, 's');
+INSERT INTO dbo.FILME VALUES ('Austr√°lia', 3, 'Baz Luhrmann', 4, 's');
+INSERT INTO dbo.FILME VALUES ('Ultimato Bourn', 3, 'Paul Greengrass', 3.5, 'n');
+INSERT INTO dbo.FILME VALUES ('Constantine', 4, 'Francis Lawrence', 2.5, 's');
+INSERT INTO dbo.FILME VALUES ('Os Irm√£os Grimm', 4, 'Terry Gilliam', 3.5, 'n');
+INSERT INTO dbo.FILME VALUES ('Os Doze Macacos', 4, 'Terry Gilliam', 2.5, 'n');
+INSERT INTO dbo.FILME VALUES ('Amadeus', 5, 'Milos Forman', 10, 'n');
+INSERT INTO dbo.FILME VALUES ('As Torres G√™meas', 5, 'Oliver Stone', 2.5, 's');
+INSERT INTO dbo.FILME VALUES ('Platoon', 1, 'Oliver Stone', 5.5, 's');
+INSERT INTO dbo.FILME VALUES ('O Advogado do Diabo', 6, 'Taylor Hackford', 1.5, 's');
+INSERT INTO dbo.FILME VALUES ('Beowulf', 7, 'Robert Zemeckis', 1, 'n');
+INSERT INTO dbo.FILME VALUES ('Bolt o super c√£o', 7, 'Byron Howard', 1.5, 's');
+INSERT INTO dbo.FILME VALUES ('Apertem o cinto o piloto sumiu', 9, 'Jim Abrahams', 3.6, 's');
+INSERT INTO dbo.FILME VALUES ('Doze √© demais', 9, 'Shawn Levy', 9.2, 's');
+INSERT INTO dbo.FILME VALUES ('Uma noite no museu', 9, 'Shawn Levy', 2.5, 'n');
 
---LocaÁıes
+--Loca√ß√µes
 
 
 INSERT INTO LOCACOES VALUES (1,1,convert(datetime,'2010-03-20 19:05:43.887',102),convert(datetime,'2010-03-23 00:00:00.000',102));
